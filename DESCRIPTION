@@ -7,7 +7,7 @@ Maintainer: Yaakov Miller <ykv00001@gmail.com>
 Description: Provides timeline visualization and map visualization
     for earthquake data.
 Depends:
-    R (>= 3.4.1)
+    R (>= 3.4.0)
 Imports:
     readr,
     dplyr,
