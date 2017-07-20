@@ -1,0 +1,33 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Installation
+
+Use the devtools package:
+
+```{r eval = FALSE}
+library(devtools)
+install_github("ykv001/ykvdpcap")
+library(ykvdpcap)
+```
+
+## Functions
+
+This package includes the following functions
+
+* eq_clean_data
+* eq_create_label
+* eq_data_read
+* eq_location_clean
+* eq_map
+* eq_time
+* geom_timeline
+* geom_timeline_label
