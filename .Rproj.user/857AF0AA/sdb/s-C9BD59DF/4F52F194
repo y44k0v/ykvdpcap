@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(testthat)\nlibrary(ykvdpcap)\n\ntest_check(\"ykvdpcap\")\n",
+    "created" : 1500535812398.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "373841826",
+    "id" : "4F52F194",
+    "lastKnownWriteTime" : 1500535898,
+    "last_content_update" : 1500535898199,
+    "path" : "C:/Users/win10/Desktop/Coursera/Rpackages/ykvdpcap/tests/testthat.R",
+    "project_path" : "tests/testthat.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

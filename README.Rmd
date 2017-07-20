@@ -1,0 +1,11 @@
+---
+title: "MSDR Capstone - NOAA Earthquake Visualizations"
+author: "Yaakov Miller"
+date: "July 20, 2017"
+output: 
+        html_document:
+                keep_md: yes
+                        
+---
+
+For now doc and testing more to follow...

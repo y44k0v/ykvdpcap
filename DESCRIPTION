@@ -1,0 +1,26 @@
+Package: ykvdpcap
+Type: Package
+Title: MSDR Capstone - NOAA Earthquake Visualizations
+Version: 0.1.0
+Author: Yaakov Miller
+Maintainer: Yaakov Miller <ykv00001@gmail.com>
+Description: Provides timeline visualization and map visualization
+    for earthquake data.
+Depends:
+    R (>= 3.4.1)
+Imports:
+    readr,
+    dplyr,
+    tidyr,
+    stringr,
+    lubridate,
+    ggplot2,
+    leaflet
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
