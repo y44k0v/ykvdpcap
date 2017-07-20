@@ -1,7 +1,7 @@
 ---
 title: "MSDR Capstone - NOAA Earthquake Visualizations"
 author: "Yaakov Miller"
-date: "July 20, 2017"
+date: "`r Sys.Date()`"
 output: 
         html_document:
                 keep_md: yes
@@ -38,4 +38,74 @@ This package includes the following functions
 * geom_timeline
 * geom_timeline_label
 
+## Usage
 
+### Data loading and cleaning
+
+```{r , message=FALSE}
+library(ggplot2)
+library(leaflet)
+library(lubridate)
+library(dplyr)
+library(readr)
+library(stringr)
+
+library(ykvdpcap)
+data<-system.file('extdata','data.gz', package = 'ykvdpcap')
+
+eq_data <- eq_data_read(data)
+knitr::kable(head(eq_data[,1:7]))
+
+eq_clean <- eq_data %>% eq_clean_data()
+knitr::kable(head(eq_clean[,1:7]))
+
+```
+
+### Time Line
+
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter(COUNTRY == "USA" & lubridate::year(DATE) >= 2000) %>%
+eq_time(size="EQ_PRIMARY",color="DEATHS")
+```
+
+### With Location Names
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter(COUNTRY == "USA" & lubridate::year(DATE) >= 2000) %>%
+eq_time(size="EQ_PRIMARY",color="DEATHS",alpha=0.5,timeline_label=TRUE)
+```
+
+### 2 Countries
+
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter((COUNTRY=="USA" | COUNTRY=="MEXICO") & lubridate::year(DATE) >= 2000) %>%
+eq_time(y="COUNTRY",color="DEATHS",alpha=0.5)
+```
+
+### 2 Countries With Location Names
+
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter((COUNTRY=="USA" | COUNTRY=="CHILE") & lubridate::year(DATE) >= 2000) %>%
+eq_time(y="COUNTRY",color="DEATHS",alpha=0.5,timeline_label=TRUE)
+```
+
+### Interactive Map
+
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter(COUNTRY == "PERU" & lubridate::year(DATE) >= 2000) %>%
+eq_map(annot_col = "DATE")
+```
+
+
+### Interactive Map with automated popup text
+
+```{r , message=FALSE}
+eq_clean %>%
+dplyr::filter(COUNTRY == "ITALY" & lubridate::year(DATE) >= 2000) %>%
+dplyr::mutate(popup_text = eq_create_label(.)) %>%
+eq_map(annot_col = "popup_text")
+```
