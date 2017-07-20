@@ -1,7 +1,7 @@
 ---
 title: "MSDR Capstone - NOAA Earthquake Visualizations"
 author: "Yaakov Miller"
-date: "`r Sys.Date()`"
+date: "7/20/17"
 output: 
         html_document:
                 keep_md: yes
