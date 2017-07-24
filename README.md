@@ -1,4 +1,4 @@
-# MSDR Capstone - NOAA Earthquake Visualizations
+# Mastering Software Development in R Capstone - NOAA Earthquake Visualizations
 Yaakov Miller  
 7/20/17  
 
