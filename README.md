@@ -7,7 +7,7 @@ Yaakov Miller
 
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/4e2o517rh8ymnt9k?svg=true)](https://ci.appveyor.com/project/ykv001/ykvdpcap)
 
-For now docs and testing more to follow...
+
 
 ## Installation
 
